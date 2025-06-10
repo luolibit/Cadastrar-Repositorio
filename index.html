@@ -115,6 +115,16 @@
  
         const validarRepositorio = criarValidadores();
 
+        //debounce: evita chamdas desnecessárias ou exessivas a uma determinada função
+
+        function rebater(funcao, atraso) {
+            let timeout;
+            return (...args) => {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => funcao(...args), atraso);
+            };
+        }
+
         document.getElementById('nomeRepositorio').addEventListener('keyup', validarRepositorio.validarNomeRepositorio);
 
         document.getElementById('senhaRepositorio').addEventListener('keyup', validarRepositorio.validarSenhaRepositorio);
