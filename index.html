@@ -10,18 +10,21 @@
     <h1>Then e Catch usando AbortController</h1>
     <p>Nesta demonstração, vamos tratar do uso encadeado do then/catch para resolução de Promises usando um AbortController para evitar respostas consecutivas de chamadas de função que deveriam ter sido canceladas.</p>
  
-    <form action="">
-        <label for="nomeRepositorio">Nome do repositório</label>
-        <input type="text" id="nomeRepositorio" onkeyup="validarRepositorio.validarNomeRepositorio()" required autofocus>
-        <output id="outputNomeRepositorio"></output>
-        <br><br>
- 
-        <label for="senhaRepositorio">Senha do repositório</label>
-        <input type="password" id="senhaRepositorio" onkeyup="validarRepositorio.validarSenhaRepositorio()" required>
-        <output id="outputSenhaRepositorio"></output>
+    <form>
+        <div class="m-3">
+            <label for="nomeRepositorio" class="form-label">Nome do repositório</label>
+            <input type="text" id="nomeRepositorio" required autofocus>
+            <output id="outputNomeRepositorio" class="form-text"></output>
+        </div>
+
+        <div>
+            <label for="senhaRepositorio">Senha do repositório</label>
+            <input type="password" id="senhaRepositorio" required>
+            <output id="outputSenhaRepositorio"></output>
+        </div>
     </form>
     
-    <script src="<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script></script>
     <script>
         const outputNomeRepositorio = document.getElementById('outputNomeRepositorio');
         const outputSenhaRepositorio = document.getElementById('outputSenhaRepositorio');
